@@ -1,0 +1,8 @@
+[
+
+    {"id":1, "title":"Moto-G 04", "description": "Pantalla brillante de 6.6 y 90 Hz con sonido Dolby Atmos®", "image":"../public/images/motog04.png", "price":"249", "stock":10,"category": "celulares"},
+
+    {"id":2, "title":"Moto-G 14", "description": "Pantalla Full HD+ de 6.5 y parlantes estéreo con Dolby Atmos®", "image":"../public/images/motog14.png", "price":"329", "stock":10,"category": "celulares"},
+
+    {"id":3, "nombre":"Moto-G 23", "description": "Sistema de cámaras de 50 MP + Ultra Gran Angular + Macro.", "image":"../public/images/motog23.png", "price":"349", "stock":10,"category": "celulares"}
+]

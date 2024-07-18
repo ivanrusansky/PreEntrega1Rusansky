@@ -1,15 +1,16 @@
 import { useEffect, useState } from "react";
 import arrayProductos from "../assets/json/productos.json"
-import ItemList from "./ItemList";
+import ItemDetail from "./ItemDetail";
 
 
-const ItemListContainer = () => {
-    const [items, setItems] = useState([]);
+
+const ItemDetailContainer = () =>{
+    const [item, setItems] = useState({});
 
     useEffect(() => {
         const promesa = new Promise(resolve => {
             setTimeout(() => {
-                resolve(arrayProductos)
+                resolve(arrayProductos.find(item => item.id === 2))
             }, 2000)
 
         })
@@ -23,11 +24,12 @@ const ItemListContainer = () => {
     return (
         <div className="container">
             <div className="row">
-                    <ItemList items={items}/>
+                    <ItemDetail item={item}/>
             </div>
         </div>
 
     )
 }
 
-export default ItemListContainer
+
+export default ItemDetailContainer
