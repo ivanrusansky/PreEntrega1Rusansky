@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-import ItemDetailContainer from "./ItemDetailContainer"
+import ItemCount from "./ItemCount";
 
 const ItemDetail = ({item}) =>{
     return(
@@ -12,6 +11,7 @@ const ItemDetail = ({item}) =>{
                     <h1>{item.title}</h1>
                     <p>${item.price}</p>
                     <p>{item.description}</p>
+                    <ItemCount stock={item.stock}/>
                 </div>
             </div>
         </div>

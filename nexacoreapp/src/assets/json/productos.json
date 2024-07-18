@@ -4,5 +4,15 @@
 
     {"id":2, "title":"Moto-G 14", "description": "Pantalla Full HD+ de 6.5 y parlantes estéreo con Dolby Atmos®", "image":"../public/images/motog14.png", "price":"329", "stock":10,"category": "celulares"},
 
-    {"id":3, "nombre":"Moto-G 23", "description": "Sistema de cámaras de 50 MP + Ultra Gran Angular + Macro.", "image":"../public/images/motog23.png", "price":"349", "stock":10,"category": "celulares"}
+    {"id":3, "nombre":"Moto-G 23", "description": "Sistema de cámaras de 50 MP + Ultra Gran Angular + Macro.", "image":"../public/images/motog23.png", "price":"349", "stock":10,"category": "celulares"},
+
+    {"id":4, "nombre":"NOTEBOOK KANJI KJ-NTB5001 INTEL CORE I5", "description": "Notebook. Pantalla de 15.6 FHD (1920x1080). Procesador Intel Core i5-1155G7 (velocidad del procesador 2.5 hasta 4.5 GHz). Capacidad 256 Gb EMMC. RAM 8 Gb. Placa de video Intel UHD Graphics 10th Gen. Conexiones: Wi Fi. Bluetooth. HDMI. USB. Entrada para microfono. Microfono incorporado. Lector de tarjetas. Sistema operativo Windows 11. Camara frontal. Bateria de 4500 mAh. Teclado numerico. Incluye cargador.", "image":"../public/images/notebookkangi.jpg", "price":"810", "stock":10,"category": "computadoras"},
+
+    {"id":5, "nombre":"NOTEBOOK ACER ASPIRE 3 A315-59-56NJ INTEL CORE I5", "description": "Notebook. Pantalla 15.6 FHD (1920 x 1080) Acer Comfy View LED LCD. Procesador Intel Core i5-1235U (hasta 4.40 Ghz), 10 nucleos. Capacidad 512 GB, PCIe Gen3 8 Gb/s up to 4 lanes, NVMe. RAM 8 GB (4+4) Dual-channel DDR4 SDRAM support. Upgradable to 32 GB using two soDIMM modules. Placa de video Intel Iris X graphics. Conexiones: Wi Fi 802.11ax wireless LAN, Dual Band (2.4 GHz and 5 GHz). HDMI. 3 USB 3.2. Entrada para microfono. Microfono incorporado. Sistema operativo Windows 11 home. Camara HD 720. Bateria de 40 WH 3 Cell Li-ion.", "image":"../public/images/notebookacer.jpg", "price":"1031", "stock":10,"category": "computadoras"},
+
+    {"id":6, "nombre":"NOTEBOOK ASUS ZENBOOK 14 UM3402YA-KP373W - 90NB0W95-M00TF0 AMD R5", "description": "Notebook. Pantalla de 14 WQXGA (2560 x 1600) 16:10. Tasa de refresco 60 Hz. Brillo 400 nits. Procesador AMD Ryzen 5 7530U Mobile Processor (6-core/12-thread, 16MB cache, 2.0 hasta 4.5 GHz). Capacidad 512GB M.2 NVMe PCIe 3.0 SSD. RAM 8GB DDR4 on board. Placa de video AMD Radeon graphics. Conexiones: Wi-Fi 6E(802.11ax) (Dual band) 2*2 + Bluetooth 5.3 Wireless Card. 1x USB 3.2 Gen 2 Type-A2x USB 3.2 Gen 2 Type-C support display / power delivery1xHDMI2.1 TMDS1x 3.5mm Combo Audio Jack. Lector de tarjetas Micro SD. Microfono incorporado. Sistema operativo Windows 11 home. Camara FHD 1080p. Bateria 75WHrs, 2S2P, 4-cell Li-ion. Sensor de huella dactilar.", "image":"../public/images/notebookaus.jpg", "price":"1499", "stock":10,"category": "computadoras"}
+
+
+
+
 ]
