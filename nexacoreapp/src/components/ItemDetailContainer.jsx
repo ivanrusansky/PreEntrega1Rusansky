@@ -1,38 +1,46 @@
 import { useEffect, useState } from "react";
-import arrayProductos from "../assets/json/productos.json"
-import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
+import { getFirestore, doc, getDoc } from "firebase/firestore";
 
-
-
-const ItemDetailContainer = () =>{
-    const [item, setItem] = useState({});
-    const {id} = useParams ();
-
+const ItemDetailContainer = () => {
+    const { id } = useParams();
+    const [item, setItem] = useState(null);
 
     useEffect(() => {
-        const promesa = new Promise(resolve => {
-            setTimeout(() => {
-                resolve(arrayProductos.find(item => item.id == id))
-            }, 2000)
+        const fetchItem = async () => {
+            const db = getFirestore();
+            const itemDoc = doc(db, "items", id);
+            try {
+                const docSnap = await getDoc(itemDoc);
+                if (docSnap.exists()) {
+                    setItem({ id: docSnap.id, ...docSnap.data() });
+                } else {
+                    console.log("No such document!");
+                }
+            } catch (error) {
+                console.error("Error fetching document: ", error);
+            }
+        };
 
-        })
+        fetchItem();
+    }, [id]);
 
-        promesa.then(response => {
-            setItems(response)
-
-        })
-    }, [])
+    if (!item) return <div>Loading...</div>;
 
     return (
-        <div className="container">
+        <div className="container mt-4 mb-5">
             <div className="row">
-                    <ItemDetail item={item}/>
+                <div className="col-md-6">
+                    <img src={item.imagen} alt={item.nombre} className="img-fluid item-image" />
+                </div>
+                <div className="col-md-6">
+                    <h2 className="item-title">{item.nombre}</h2>
+                    <p className="item-price"><b>${item.precio}</b></p>
+                    <p className="item-description">{item.descripcion}</p>
+                </div>
             </div>
         </div>
+    );
+};
 
-    )
-}
-
-
-export default ItemDetailContainer
+export default ItemDetailContainer;

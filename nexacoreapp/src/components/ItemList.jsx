@@ -1,15 +1,19 @@
-import Item from "./Item"
+import Item from "./Item";
 
+const ItemList = ({ items }) => {
+    return (
+        <div className="row">
+            {items.length > 0 ? (
+                items.map((item) => (
+                    <div className="col-md-4 mb-3" key={item.id}>
+                        <Item item={item} />
+                    </div>
+                ))
+            ) : (
+                <p>No items found for this category.</p>
+            )}
+        </div>
+    );
+};
 
-const ItemList = ({items}) =>{
-    return(
-        <>
-        {items.map (producto =>(
-            <Item key= {producto.id} item={producto} />
-        ))}
-        </>
-    )
-}
-
-
-export default ItemList
+export default ItemList;

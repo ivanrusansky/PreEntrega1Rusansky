@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import CartWidget from "./CartWidget"; // Añade esta línea para importar CartWidget
+import CartWidget from "./CartWidget"; // Asegúrate de que esta ruta sea correcta
 
 const NavBar = () => {
     return (
@@ -12,20 +12,19 @@ const NavBar = () => {
                 </div>
                 <div className="col">
                     <ul className="nav justify-content-center">
-                        
                         <li className="nav-item">
-                            <NavLink to={"/category/celulares"} className="nav-link text-black">Celulares</NavLink>
+                            <NavLink to={"/category/celular"} className="nav-link text-black">Celulares</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink to={"/category/computadoras"} className="nav-link text-black">Computadoras</NavLink>
+                            <NavLink to={"/category/computadora"} className="nav-link text-black">Computadoras</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink to={"/category/tablets"} className="nav-link text-black">Tablets</NavLink>
+                            <NavLink to={"/category/tablet"} className="nav-link text-black">Tablets</NavLink>
                         </li>
                     </ul>
                 </div>
                 <div className="col text-end">
-                    <CartWidget /> {}
+                    <CartWidget />
                 </div>
             </div>
         </div>
