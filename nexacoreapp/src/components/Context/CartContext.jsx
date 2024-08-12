@@ -5,33 +5,48 @@ const CartContext = createContext();
 export const CartProvider = ({ children }) => {
     const [cart, setCart] = useState([]);
 
-    // Agrega un item al carrito o actualiza la cantidad si ya existe
+
     const addToCart = (item, quantity) => {
+        console.log('Adding to cart:', item, quantity);
+
         setCart(prevCart => {
-            const existingItem = prevCart.find(i => i.id === item.id);
+            const existingItem = prevCart.find(i => i.id === item.nombre);
             if (existingItem) {
-                return prevCart.map(i =>
+                const updatedCart = prevCart.map(i =>
                     i.id === item.id
                         ? { ...i, quantity: i.quantity + quantity }
                         : i
                 );
+                console.log('Updated cart with existing item:', updatedCart);
+                return updatedCart;
             }
-            return [...prevCart, { ...item, quantity }];
+            const newCart = [...prevCart, { ...item, quantity }];
+            console.log('New cart with new item:', newCart);
+            return newCart;
         });
     };
 
-    // Elimina un item del carrito por su ID
+
     const removeItem = (itemId) => {
-        setCart(prevCart => prevCart.filter(item => item.id !== itemId));
+        console.log('Removing item with id:', itemId);
+
+        setCart(prevCart => {
+            const updatedCart = prevCart.filter(item => item.id !== itemId);
+            console.log('Updated cart after removal:', updatedCart);
+            return updatedCart;
+        });
     };
 
-    // Limpia el carrito
+
     const clear = () => {
+        console.log('Clearing the cart');
+
         setCart([]);
     };
 
-    // Devuelve el carrito
+
     const getCart = () => {
+        console.log('Getting cart:', cart);
         return cart;
     };
 
@@ -43,4 +58,3 @@ export const CartProvider = ({ children }) => {
 };
 
 export const useCart = () => useContext(CartContext);
-
